@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Microsoft.AppCenter.Push;
+using System.ServiceProcess;
 
 namespace AppCenterExample.Droid
 {
@@ -20,6 +22,17 @@ namespace AppCenterExample.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+
+        protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
+
+        public void OnRegistered(string token, ServiceType deviceType)
+        {
+            //use token here 
         }
     }
 }

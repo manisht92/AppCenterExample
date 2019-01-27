@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "304378425886",
+    "firebase_url": "https://appcenterexample-b26b4.firebaseio.com",
+    "project_id": "appcenterexample-b26b4",
+    "storage_bucket": "appcenterexample-b26b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:304378425886:android:8d9006c0542bf3da",
+        "android_client_info": {
+          "package_name": "com.manishtiwari.AppCenterExample"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "304378425886-ii2k42qj55hh58kg3d1nc693bgrduid1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUlKpvEAFOvCr1kz56X3iZpPqQeKlfxsg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
