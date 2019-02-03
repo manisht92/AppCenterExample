@@ -44,10 +44,19 @@ namespace AppCenterExample
 
         }
 
+        async void abc()
+        {
+            System.Guid? installId = await AppCenter.GetInstallIdAsync();
+            System.Diagnostics.Debug.WriteLine("MTG : " + installId);
+            AppCenter.SetUserId(installId.ToString());
+        }
+
         protected override void OnStart()
         {
             // Handle when your app starts
             AppCenter.Start("ios=db53fbdd-1b17-45b5-8b21-ce008cc53778;" + "uwp=04b94821-b30b-4219-b2e6-c5eb2a1325e6;" + "android=5c9910e1-d44b-4489-b283-0ac71fab54c5;", typeof(Analytics), typeof(Crashes), typeof(Push));
+
+            abc();
         }
 
         protected override void OnSleep()
