@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:AppCenterExample"
-              x:Class="AppCenterExample.MainPage">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:local="clr-namespace:AppCenterExample" x:Class="AppCenterExample.MainPage">
+    <ContentPage.BindingContext>
+        <local:MyViewModel />
+    </ContentPage.BindingContext>
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Button Text="Increase Count" Command="{Binding IncreaseCommand}" />
+        <Label Text="{Binding DisplayCount}" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" />
     </StackLayout>
 </ContentPage>
