@@ -9,6 +9,16 @@
                     <local:CustomBehavior />
                 </Entry.Behaviors>
             </Entry>
+            <ListView x:Name="DemoList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="abc" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <ListView.Behaviors>
+                    <local:ListViewSelectedItemBehavior Command="{Binding OutputAgeCommand}"/>
+                </ListView.Behaviors>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
