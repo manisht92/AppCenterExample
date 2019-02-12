@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              x:Class="AppCenterExample.ListViewCommandPage" xmlns:local="clr-namespace:AppCenterExample" Padding="5,60,5,5">
+              x:Class="AppCenterExample.ListViewCommandPage" xmlns:local="clr-namespace:AppCenterExample"
+              Padding="5,60,5,5">
     <ContentPage.BindingContext>
         <local:ListviewVM />
     </ContentPage.BindingContext>
     <StackLayout>
-        <Label Text="{Binding AlertMessage}"/>
-        <local:BetterListView ItemsSource="{Binding MySource}" ItemClickCommand="{Binding MyItemClickCommand}" />
+        <Label Text="{Binding AlertMessage}" />
+        <!--        <local:BetterListView ItemsSource="{Binding MySource}" ItemClickCommand="{Binding MyItemClickCommand}" />-->
+        <ListView ItemsSource="{Binding MySource}" SelectedItem="{Binding SelectedItem}"
+                   CachingStrategy="RecycleElementAndDataTemplate" />
     </StackLayout>
 </ContentPage>

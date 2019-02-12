@@ -16,6 +16,25 @@ namespace AppCenterExample
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public string _selectedItem;
+        public string SelectedItem
+        {
+            get => _selectedItem;
+            set
+            {
+                if (_selectedItem != value)
+                {
+                    _selectedItem = value;
+                    HandleSelectedItem();
+                }
+            }
+        }
+
+        public void HandleSelectedItem()
+        {
+            var abc = SelectedItem;
+        }
+
         public ObservableCollection<string> _mySource;
 
         public ObservableCollection<string> MySource
