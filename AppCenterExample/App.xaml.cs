@@ -16,7 +16,8 @@ namespace AppCenterExample
             InitializeComponent();
 
             //MainPage = new CustomBehaviorPage();
-            MainPage = new ListViewCommandPage();
+            //MainPage = new ListViewCommandPage();
+            MainPage = new ValidationPage();
 
             if (!AppCenter.Configured)
             {

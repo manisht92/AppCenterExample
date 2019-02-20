@@ -17,5 +17,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="VSMPage.cs" />
+    <Compile Remove="Controls\EmailAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ValidationBehaviors\" />
+    <Folder Include="Library\" />
   </ItemGroup>
 </Project>
